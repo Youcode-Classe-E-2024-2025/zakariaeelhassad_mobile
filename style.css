@@ -1,8 +1,7 @@
 body{
     background-color: black;
     color: white;
-    justify-content: center;
-    text-align: center;
+   
 }
 .td1{
     font-size: 35px;
@@ -114,4 +113,71 @@ button{
     background-color: #3898EC;
     text-align: center;
     color: white;
+}
+
+
+
+
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    column-gap: 100px;
+    /*row-gap*/
+    /* gap: ; */
+    width: 90%;
+    padding: 20px 30px;
+}
+
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color:#797474;
+    padding: 20px 30px;
+
+}
+
+.phone-products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #343232;
+}
+
+.product{
+    background-color:#797474;
+    width: 200px;
+    height: 250px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.product-image{
+    width: 100px;
+    height: 150px;
+}
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
