@@ -17,8 +17,6 @@ header{
     flex-wrap: wrap;
     column-gap: 300px;
     font-size: 20px;
-    /*row-gap*/
-    /* gap: ; */
     width: 90%;
     padding: 20px 100px;
 }
@@ -75,13 +73,56 @@ header{
     align-items: center;
     font-size: 35px;
     width: 76%;
+    row-gap: 0px;
     background-color:#797474;
     padding: 20px 30px;
     flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-.p{
+
+/*animation*/
+
+.container-animation {
+    overflow: hidden;
+}
+
+.animated-image {
+    width: 200px; 
+    animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translatey(0);
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatey(00px);
+        transform: translatex(182px);
+    }
+}
+
+.head-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+font{
     color: black;
 }
+.head p {
+    display: flex;
+    align-items: center;
+}
+.head-img2 img{
+    height: 200px;
+    width: 200px;
+}
+.head-img2{
+    height: 200px;
+    width: 200px;
+}
+
 /* MENU */
 .phone-products{
     display: flex;
@@ -117,11 +158,8 @@ header{
     color: black;
 }
 
-.button0{
-    background-color: #00A4EE;
-}
+/* commande and download */
 
-.button
 .commande-download{
     display: flex;
     justify-content: space-around;
@@ -130,6 +168,14 @@ header{
     padding: 50px 20px;
     gap: 20px;
 }
+
+.commande,
+.download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .commande-form , 
 .download-buttons{
@@ -144,23 +190,32 @@ header{
 
 }
 
-.commande,
-.download{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-
-
-.download-buttons button{
+.download-buttons button,
+.commande-form button{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30px;
     background-color: #00A4EE;
     border: 0;
+    transition: background-color 3s ease; 
+    transform: height 3s ease;
 }
+
+.download-buttons button:hover ,
+.commande-form button:hover{
+    background-color: rgb(73, 13, 192); 
+    height: 50px;
+}
+
+.commande-button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
 
 .button1 img{
     width: 40px;
@@ -172,10 +227,14 @@ header{
     height: 22px;
 }
 
+/* buy now */
+
 .buy-now{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
+    
 }
 
 .buy-now-buttons{
@@ -190,6 +249,11 @@ header{
 
 }
 
+.buy-now-button:hover {
+    background-color: green; 
+    width: 200px;  
+}
+
 .buy-now-buttons button{
     display: flex;
     align-items: center;
@@ -197,6 +261,13 @@ header{
     height: 30px;
     background-color: yellow;
     border: 0;
+    transition: background-color 3s ease; 
+    transform: height 3s ease;
+}
+
+.buy-now-buttons button:hover{
+    background-color: rgb(52, 192, 13); 
+    height: 50px;
 }
 
 .button3 img{
@@ -208,6 +279,8 @@ header{
     height: 40px;
 }
 
+/* footer */
+
 footer{
     background-color: #797474;
     color: white;
@@ -217,4 +290,20 @@ footer{
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
+    padding: 30px 80px;
+}
+
+.footer-p{
+    font-size: 20px;
+}
+
+.footer-p2{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.foot p img{
+    width: 40px;
+    height: 40px;
 }
