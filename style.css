@@ -1,9 +1,11 @@
+html{
+    width: 100%;
+}
 body{
     background-color: black;
     color: white;
    margin: 0%;
 }
-
 header{
     display: flex;
     flex-direction: column;
@@ -12,13 +14,14 @@ header{
 
 .navbar {
     display: flex;
-    justify-content: center ;
+    justify-content :center ;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 300px;
+    width: 100%;
     font-size: 20px;
-    width: 90%;
-    padding: 20px 100px;
+    width: 100%;
+}
+.navbar a{
+    color: white;
 }
 
 .xiaomi-img {
@@ -78,7 +81,13 @@ header{
     padding: 20px 30px;
     flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 30px;
 }
+.head-img img{
+    height: 80px;
+    width: 70px;
+}
+
 
 /*animation*/
 
@@ -110,6 +119,9 @@ header{
 font{
     color: black;
 }
+.khat{
+    text-decoration: line-through;
+}
 .head p {
     display: flex;
     align-items: center;
@@ -124,6 +136,9 @@ font{
 }
 
 /* MENU */
+.menu{
+    font-size: 20px;
+}
 .phone-products{
     display: flex;
     justify-content: center;
@@ -132,6 +147,7 @@ font{
     width: 80%;
     background-color: #343232;
     grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 30px;
 }
 
 .product{
@@ -143,6 +159,7 @@ font{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
 
 }
 .product-image{
@@ -187,6 +204,7 @@ font{
     background-color: #797474;
     width: 350px;
     height: 120px;
+    border-radius: 30px;
 
 }
 
@@ -197,10 +215,16 @@ font{
     align-items: center;
     justify-content: center;
     height: 30px;
+    color: aliceblue;
     background-color: #00A4EE;
     border: 0;
+    border-radius: 30px;
     transition: background-color 3s ease; 
     transform: height 3s ease;
+}
+
+.commande-form a{
+    color: aliceblue;
 }
 
 .download-buttons button:hover ,
@@ -214,6 +238,7 @@ font{
     justify-content: center;
     align-items: center;
     row-gap: 20px;
+    
 }
 
 
@@ -241,11 +266,12 @@ font{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    padding: 13px;
     row-gap: 20px;
     background-color: #797474;
     width: 350px;
     height: 120px;
+    border-radius: 30px;
 
 }
 
@@ -261,6 +287,7 @@ font{
     height: 30px;
     background-color: yellow;
     border: 0;
+    border-radius: 30px;
     transition: background-color 3s ease; 
     transform: height 3s ease;
 }
@@ -284,6 +311,7 @@ font{
 footer{
     background-color: #797474;
     color: white;
+    border-radius: 30px;
 }
 .foot{
     display: grid;
@@ -306,4 +334,75 @@ footer{
 .foot p img{
     width: 40px;
     height: 40px;
+}
+/* Styles pour les petits écrans (téléphones) */
+@media (max-width: 600px) {
+    img{
+        width: 350px;
+    }
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .image-container {
+        padding: 20px 0;
+    }
+
+    .head {
+        flex-direction: column; 
+        width: 84%;
+    }
+
+    .phone-products {
+        flex-direction: column; 
+        align-items: center;
+        width: 100%; 
+    }
+
+    .product {
+        width: 90%; 
+        margin: 20px 0; 
+    }
+
+    .commande-download {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .commande-form,
+    .download-buttons {
+        width: 90%; 
+    }
+}
+
+/* Styles pour les écrans moyens (tablettes) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .phone-products {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+
+    .product {
+        width: 45%; 
+        margin: 10px; 
+    }
+
+    .commande-download {
+        flex-direction: row;
+        justify-content: space-between; 
+        padding: 30px;
+    }
+
+    .commande-form,
+    .download-buttons {
+        width: 45%; 
+    }
 }
